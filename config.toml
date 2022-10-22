@@ -1,0 +1,791 @@
+title = "PunitKashyap"
+baseURL = "https://PunitKashyap.live"
+
+# theme
+theme = "FixIt"
+
+
+# determines default content language ["en", "zh-cn", "fr", "pl", ...]
+defaultContentLanguage = "en"
+# language code ["en", "zh-CN", "fr", "pl", ...]
+languageCode = "en"
+# language name ["English"]
+languageName = "English"
+# whether to include Chinese/Japanese/Korean
+hasCJKLanguage = false
+
+# default amount of posts in each pages
+paginate = 12
+# google analytics code [UA-XXXXXXXX-X]
+googleAnalytics = ""
+# copyright description used only for seo schema
+copyright = ""
+
+# whether to use robots.txt
+enableRobotsTXT = true
+# whether to use git commit log
+enableGitInfo = true
+# whether to use emoji code
+enableEmoji = true
+
+# ignore some build errors
+ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
+
+# Post frontmatter config
+[frontmatter]
+  lastmod = [":git", "lastmod", ":fileModTime", ":defalut"]
+
+# -------------------------------------------------------------------------------------
+# Menu Settings
+# See: https://fixit.lruihao.cn/theme-documentation-basics/#menu-advanced-configuration
+# -------------------------------------------------------------------------------------
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "Posts"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+    weight = 3
+
+# -------------------------------------------------------------------------------------
+# Theme Core Configuration Settings
+
+# -------------------------------------------------------------------------------------
+
+[params]
+  # FixIt theme version
+  version = "0.2.X"
+  # website description for RSS, SEO, Open Graph and Twitter Cards
+  description = "Devops Blog"
+  # site keywords
+  keywords = ["DevOps", "CICD"]
+  # site default theme ["light", "dark", "auto"]
+  defaultTheme = "auto"
+  # public git repo url only then enableGitInfo is true
+  gitRepo = "https://github.com/hugo-fixit/docs"
+  # which hash function used for SRI, when empty, no SRI is used ["sha256", "sha384", "sha512", "md5"]
+  fingerprint = ""
+  # date format
+  dateFormat = "2006-01-02"
+  # website images for Open Graph and Twitter Cards
+  images = ["/logo.png"]
+  # enable PWA since v0.2.12
+  enablePWA = true
+  # whether to add external Icon for external links automatically since v0.2.14
+  externalIcon = true
+  # FixIt will, by default, inject a theme meta tag in the HTML head on the home page only. since v0.2.14
+  # You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
+  disableThemeInject = false
+
+  # App icon config
+  [params.app]
+    # optional site title override for the app when added to an iOS home screen or Android launcher
+    title = ">$ cd /home/"
+    # whether to omit favicon resource links
+    noFavicon = false
+    # modern SVG favicon to use in place of older style .png and .ico files
+    svgFavicon = ""
+    # Safari mask icon color
+    iconColor = "#5bbad5"
+    # Windows v8-10 tile color
+    tileColor = "#da532c"
+    # Android browser theme color
+    [params.app.themeColor]
+      light = "#f8f8f8"
+      dark = "#252627"
+
+  # Search config
+  [params.search]
+    enable = true
+    # type of search engine ["lunr", "algolia"]
+    type = "lunr"
+    # max index length of the chunked content
+    contentLength = 4000
+    # placeholder of the search bar
+    placeholder = ""
+    # max number of results length
+    maxResultLength = 10
+    # snippet length of the result
+    snippetLength = 30
+    # HTML tag name of the highlight part in results
+    highlightTag = "em"
+    # whether to use the absolute URL based on the baseURL in search index
+    absoluteURL = false
+    [params.search.algolia]
+      index = ""
+      appID = ""
+      searchKey = ""
+
+  # Header config
+  [params.header]
+    # desktop header mode ["sticky", "normal", "auto"]
+    desktopMode = "sticky"
+    # mobile header mode ["sticky", "normal", "auto"]
+    mobileMode = "auto"
+    # Header title config
+    [params.header.title]
+      # URL of the LOGO
+      # LOGO 的 URL
+      logo = "/fixit.min.svg"
+      # title name
+      name = ">$ cd /home/"
+      # you can add extra information before the name (HTML format is supported), such as icons
+      pre = ""
+      # you can add extra information after the name (HTML format is supported), such as icons
+      post = ""
+      # whether to use typeit animation for title name
+      typeit = false
+    # Header subtitle config since v0.2.12
+    [params.header.subtitle]
+      # subtitle name
+      name = ""
+      # whether to use typeit animation for subtitle name
+      typeit = false
+
+  # Footer config
+  [params.footer]
+    enable = true
+    # Custom content (HTML format is supported)
+    custom = ''
+    # whether to show Hugo and theme info
+    hugo = true
+    # whether to show copyright info
+    copyright = true
+    # whether to show the author
+    author = true
+    # site creation year
+    since = 2022
+    # TODO whether to show total word count of site content
+    wordCount = true
+
+  # Section (all posts) page config
+  [params.section]
+    # special amount of posts in each section page
+    paginate = 20
+    # date format (month and day)
+    dateFormat = "01-02"
+    # amount of RSS pages
+    rss = 10
+    # recently updated posts settings since v0.2.13
+    [params.section.recentlyUpdated]
+      enable = true
+      rss = true
+      days = 30
+      maxCount = 10
+
+  # List (category or tag) page config
+  [params.list]
+    # special amount of posts in each list page
+    paginate = 20
+    # date format (month and day)
+    dateFormat = "01-02"
+    # amount of RSS pages
+    rss = 10
+
+  # Home page config
+  [params.home]
+    # FixIt 0.2.0 | NEW amount of RSS pages
+    rss = 10
+    # Home page profile
+    [params.home.profile]
+      enable = true
+      # Gravatar Email for preferred avatar in home page
+      gravatarEmail = "xx@xx.com"
+      # URL of avatar shown in home page
+      avatarURL = ""
+      # FixIt 0.2.7 | CHANGED title shown in home page (HTML format is supported)
+      title = "punit kashyup"
+      # subtitle shown in home page
+      subtitle = "This is my new Hugo FixIt site"
+      # whether to use typeit animation for subtitle
+      typeit = true
+      # whether to show social links
+      social = true
+      # FixIt 0.2.0 | NEW disclaimer (HTML format is supported)
+      disclaimer = ""
+    # Home page posts
+    [params.home.posts]
+      enable = true
+      # special amount of posts in each home posts page
+      paginate = 6
+
+  # Social config in home page
+  [params.social]
+    GitHub = ""
+    Linkedin = ""
+    Twitter = ""
+    Instagram = ""
+    Facebook = ""
+    Telegram = ""
+    Medium = ""
+    Phone = ""
+    Email = ""
+
+  # Page config
+  [params.page]
+    # whether to hide a page from home page
+    hiddenFromHomePage = false
+    # whether to hide a page from search results
+    hiddenFromSearch = false
+    # whether to enable twemoji
+    twemoji = false
+    # whether to enable lightgallery
+    lightgallery = false
+    # whether to enable the ruby extended syntax
+    ruby = true
+    # whether to enable the fraction extended syntax
+    fraction = true
+    # whether to enable the fontawesome extended syntax
+    fontawesome = true
+    # whether to show link to Raw Markdown content of the content
+    linkToMarkdown = true
+    # whether to show the full text content in RSS
+    rssFullText = false
+    # Page style ["narrow", "normal", "wide", ...) since v0.2.13
+    pageStyle = "normal"
+    # Gravatar is force-used as the author's avatar since v0.2.14
+    gravatarForce = true
+    # FixIt 0.2.17 | CHANGED Auto Bookmark Support
+    # If true, save the reading progress when closing the page.
+    autoBookmark = true
+
+    # Repost config since v0.2.15
+    [params.page.repost]
+      enable = false
+      url = ""
+    # Table of the contents config
+    [params.page.toc]
+      # whether to enable the table of the contents
+      enable = true
+      # whether to keep the static table of the contents in front of the post
+      keepStatic = false
+      # whether to make the table of the contents in the sidebar automatically collapsed
+      auto = true
+      # position of TOC ["left", "right"] since v0.2.13
+      # 目录位置 ["left", "right"] since v0.2.13
+      position = "right"
+    # Display a message at the beginning of an article to warn the reader that its content might be expired. since v0.2.13
+    [params.page.expirationReminder]
+      enable = true
+      # Display the reminder if the last modified time is more than 90 days ago
+      reminder = 90
+      # Display warning if the last modified time is more than 180 days ago
+      warning = 180
+      # If the article expires, close the comment or not
+      closeComment = false
+    # Code config
+    [params.page.code]
+      # whether to show the copy button of the code block
+      copy = true
+      # whether to show the edit button of the code block since v0.2.13
+      edit = true
+      # the maximum number of lines of displayed code by default
+      maxShownLines = 10
+    # Post edit since v0.2.14
+    [params.page.edit]
+      enable = true
+      # Link for fork & edit
+      # url = "/edit/branch-name/subdirectory-name" # base on `params.gitRepo`
+      # url = "https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name" # full url
+      url = "/edit/main/content"
+    # KaTeX mathematical formulas config (KaTeX https://katex.org/)
+    [params.page.math]
+      enable = false
+      # default inline delimiter is $ ... $ and \( ... \)
+      inlineLeftDelimiter = ""
+      inlineRightDelimiter = ""
+      # default block delimiter is $$ ... $$, \[ ... \], \begin{equation} ... \end{equation} and some other functions
+      blockRightDelimiter = ""
+      # KaTeX extension copy_tex
+      copyTex = true
+      # KaTeX extension mhchem
+      mhchem = true
+    # Mapbox GL JS config (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
+    [params.page.mapbox]
+      # access token of Mapbox GL JS
+      # Mapbox GL JS 的 access token
+      accessToken = "pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ"
+      # style for the light theme
+      lightStyle = "mapbox://styles/mapbox/light-v10?optimize=true"
+      # style for the dark theme
+      darkStyle = "mapbox://styles/mapbox/dark-v10?optimize=true"
+      # whether to add NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
+      navigation = true
+      # whether to add GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
+      geolocate = true
+      # whether to add ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
+      scale = true
+      # whether to add FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
+      fullscreen = true
+    # Social share links in post page
+    [params.page.share]
+      enable = true
+      Twitter = true
+      Facebook = true
+      Linkedin = false
+      Whatsapp = false
+    # Comment config
+    [params.page.comment]
+      enable = true
+      # Artalk comment config (https://artalk.js.org/) since v0.2.13
+      [params.page.comment.artalk]
+        enable = false
+        server = "https://yourdomain/api/"
+        site = "默认站点"
+        placeholder = ""
+        noComment = ""
+        sendBtn = ""
+        editorTravel = true
+        flatMode = 'auto'
+        maxNesting = 3
+        # It take effect when `params.page.lightgallery` is enabled
+        lightgallery = false
+        locale = "" # since v0.2.15
+      # Disqus comment config (https://disqus.com/)
+      [params.page.comment.disqus]
+        enable = false
+        # Disqus shortname to use Disqus in posts
+        shortname = ""
+      # Gitalk comment config (https://github.com/gitalk/gitalk)
+      [params.page.comment.gitalk]
+        enable = false
+        owner = ""
+        repo = ""
+        clientId = ""
+        clientSecret = ""
+      # Valine comment config (https://github.com/xCss/Valine)
+      [params.page.comment.valine]
+        enable = false
+        appId = ""
+        appKey = ""
+        placeholder = ""
+        avatar = "mp"
+        meta= ""
+        pageSize = 10
+        lang = ""
+        visitor = true
+        recordIP = true
+        highlight = true
+        enableQQ = false
+        serverURLs = ""
+        # emoji data file name, default is "google.yml"
+        # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
+        # located in "themes/FixIt/assets/data/emoji/" directory
+        # you can store your own data files in the same path under your project:
+        # "assets/data/emoji/"
+        # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
+        # "assets/data/emoji/"
+        emoji = ""
+        commentCount = true # since v0.2.13
+      # Waline comment config (https://waline.js.org) since v0.2.13
+      [params.page.comment.waline]
+        enable = false
+        serverURL = ""
+        pageview = false
+        emoji = ['//unpkg.com/@waline/emojis@1.1.0/weibo']
+        meta = ['nick', 'mail', 'link']
+        requiredMeta = []
+        login = 'enable'
+        wordLimit = 0
+        pageSize = 10
+        imageUploader = false
+        highlighter = false
+        comment = false
+        texRenderer = false
+        search = false
+        recaptchaV3Key = ""
+      # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
+      [params.page.comment.facebook]
+        enable = false
+        width = "100%"
+        numPosts = 10
+        appId = ""
+        languageCode = ""
+      # Telegram comments config (https://comments.app/)
+      [params.page.comment.telegram]
+        enable = false
+        siteID = ""
+        limit = 5
+        height = ""
+        color = ""
+        colorful = true
+        dislikes = false
+        outlined = false
+      # Commento comment config (https://commento.io/)
+      [params.page.comment.commento]
+        enable = false
+      # Utterances comment config (https://utteranc.es/)
+      [params.page.comment.utterances]
+        enable = false
+        # owner/repo
+        repo = ""
+        issueTerm = "pathname"
+        label = ""
+        lightTheme = "github-light"
+        darkTheme = "github-dark"
+      # Twikoo comment config (https://twikoo.js.org/) since v0.2.13
+      [params.page.comment.twikoo]
+        enable = false
+        envId = ""
+        region = ""
+        path = ""
+        visitor = true
+        commentCount = true
+        # It take effect when `params.page.lightgallery` is enabled
+        lightgallery = false
+      # Giscus comments config (https://giscus.app/) since v0.2.14
+      [params.page.comment.giscus]
+        enable = true
+        repo = "hugo-fixit/FixIt"
+        repoId = "R_kgDOGihPtQ"
+        category = "General"
+        categoryId = "DIC_kwDOGihPtc4CApHX"
+        mapping = "title"
+        term = ""
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "bottom" # top, bottom
+        lightTheme = "light"
+        darkTheme = "dark_dimmed"
+        lazyLoad = true
+    # Third-party library config
+    [params.page.library]
+      [params.page.library.css]
+        # someCSS = "some.css"
+        # located in "assets/" 位于 "assets/"
+        # someCSS = "https://cdn.example.com/some.css"
+      [params.page.library.js]
+        # someJavascript = "some.js"
+        # located in "assets/" 位于 "assets/"
+        # someJavascript = "https://cdn.example.com/some.js"
+    # Page SEO config
+    [params.page.seo]
+      # image URL
+      images = []
+      # Publisher info
+      [params.page.seo.publisher]
+        name = "Punit"
+        logoUrl = "/images/avatar.png"
+
+  # TypeIt config
+  [params.typeit]
+    # typing speed between each step (measured in milliseconds)
+    speed = 100
+    # blinking speed of the cursor (measured in milliseconds)
+    cursorSpeed = 1000
+    # character used for the cursor (HTML format is supported)
+    cursorChar = "|"
+    # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
+    duration = -1
+  
+  # Mermaid config since v0.2.15
+  [params.mermaid]
+    # For values, see https://mermaid-js.github.io/mermaid/#/Setup?id=theme
+    themes = ['neutral', 'dark']
+
+  # Watermark config since v0.2.12
+  # Detail config see https://github.com/Lruihao/watermark#readme
+  [params.watermark]
+    enable = true
+    # watermark's text (HTML format is supported)
+    content = ""
+    # watermark's transparency
+    opacity = 0.0125
+    # parent of watermark's container
+    appendTo = ".wrapper>main"
+    # watermark's width. unit: px
+    width = 150
+    # watermark's height. unit: px
+    height = 21
+    # row spacing of watermarks. unit: px
+    rowSpacing = 60
+    # col spacing of watermarks. unit: px
+    colSpacing = 30
+    # watermark's tangent angle. unit: deg
+    rotate = 15
+    # watermark's fontSize. unit: rem
+    fontSize = 0.85
+    # watermark's fontFamily
+    fontFamily = "inherit"
+
+  # Busuanzi count since v0.2.12
+  [params.ibruce]
+    enable = true
+    # Enable in post meta
+    enablePost = true
+  
+  # Site verification code for Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
+  [params.verification]
+    google = ""
+
+  # Site SEO config
+  [params.seo]
+    # image URL
+    image = "/images/Apple-Devices-Preview.jpg"
+    # thumbnail URL
+    thumbnailUrl = "/images/tn.png"
+
+  # Analytics config
+  [params.analytics]
+    enable = false
+    # Google Analytics
+    [params.analytics.google]
+      id = ""
+      # whether to anonymize IP
+      anonymizeIP = true
+    # Fathom Analytics
+    [params.analytics.fathom]
+      id = ""
+      # server url for your tracker if you're self hosting
+      server = ""
+
+  # Cookie consent config
+  [params.cookieconsent]
+    enable = true
+    # text strings used for Cookie consent banner
+    [params.cookieconsent.content]
+      message = "This website uses Cookies to improve your experience."
+      dismiss = "Got it!"
+      link = "https://www.cookiesandyou.com/"
+
+  # CDN config for third-party library files
+  [params.cdn]
+    # CDN data file name, disabled by default ["jsdelivr.yml", "unpkg.yml", ...]
+    # located in "themes/FixIt/assets/data/cdn/" directory
+    # you can store your own data files in the same path under your project: "assets/data/cdn/"
+    # data = "unpkg.yml"
+
+  # Compatibility config
+  [params.compatibility]
+    # whether to use Polyfill.io to be compatible with older browsers
+    polyfill = false
+    # whether to use object-fit-images to be compatible with older browsers
+    objectFit = false
+
+  # GitHub banner in the top-right or top-left corner since v0.2.14
+  [params.githubCorner]
+    enable = true
+    permalink = "https://github.com/punitkashyup"
+    title = "View source on GitHub"
+    position = "right" # ["left", "right"]
+
+  # Back to top
+  [params.backToTop]
+    enable = true
+    # Scroll percent label in b2t button
+    scrollpercent = true
+
+  # Reading progress bar
+  [params.readingProgress]
+    enable = true
+    # Available values: ["left", "right"]
+    start = "left"
+    # Available values: ["top", "bottom"]
+    position = "top"
+    reversed = false
+    light = "#000"
+    dark = "#fff"
+    height = "2px"
+
+  # Developer options since v0.2.15
+  [params.dev]
+    enable = false
+    # Check for updates
+    c4u = false
+    # For using the GitHub API, please do not expose to public!
+    githubToken = ""
+    # Mobile Devtools config
+    [params.dev.mDevtools]
+      enable = false
+      # "vConsole", "eruda" supported
+      type = "vConsole"
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    ######## necessary configurations ########
+    # https://github.com/hugo-fixit/FixIt/issues/43
+    codeFences = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false 
+    ######## necessary configurations ########
+    guessSyntax = true
+  # Goldmark is from Hugo 0.60 the default library used for Markdown
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      # whether to use HTML tags directly in the document
+      unsafe = true
+  # Table Of Contents settings
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+# Author config
+[author]
+  name = "Punit"
+  email = "mr.punitkr@gmail.com"
+  link = "https://punitkashyup.live"
+
+# Sitemap config
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+# Permalinks config (https://gohugo.io/content-management/urls/#permalinks)
+[Permalinks]
+  # posts = ":year/:month/:filename"
+  posts = ":filename"
+
+# Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
+[privacy]
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
+
+[mediaTypes]
+  # Options to make output .md files
+  [mediaTypes."text/markdown"]
+    suffixes = ["md"]
+  # Options to make output .txt files
+  [mediaTypes."text/plain"]
+    suffixes = ["txt"]
+
+[outputFormats]
+  # Options to make output .md files
+  [outputFormats.MarkDown]
+    mediaType = "text/markdown"
+    isPlainText = true
+    isHTML = false
+  # Options to make output baidu_urls.txt file
+  [outputFormats.BaiduUrls]
+    baseName = "baidu_urls"
+    mediaType = "text/plain"
+    isPlainText = true
+    isHTML = false
+
+# Options to make hugo output files
+[outputs]
+  home = ["HTML", "RSS", "JSON", "BaiduUrls"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML"]
+
+# -------------------------------------------------------------------------------------
+# Multilingual and i18n
+# -------------------------------------------------------------------------------------
+
+[languages]
+  [languages.en]
+    weight = 1
+    languageCode = "en"
+    languageName = "English"
+    hasCJKLanguage = false
+    copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "posts/"
+        weight = 1
+        [languages.en.menu.main.params]
+          icon = "fa-solid fa-archive"
+      [[languages.en.menu.main]]
+        identifier = "categories"
+        name = "Categories"
+        url = "categories/"
+        weight = 2
+        [languages.en.menu.main.params]
+          icon = "fa-solid fa-th"
+      [[languages.en.menu.main]]
+        identifier = "tags"
+        name = "Tags"
+        url = "tags/"
+        weight = 3
+        [languages.en.menu.main.params]
+          icon = "fa-solid fa-tags"
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "about/"
+        weight = 7
+        [languages.en.menu.main.params]
+          icon = "fa-solid fa-info-circle"
+      [[languages.en.menu.main]]
+        identifier = "github"
+        pre = "<i class='fa-brands fa-github fa-fw' aria-hidden='true'></i>"
+        url = "https://github.com/punitkashyup"
+        title = "GitHub"
+        weight = 8
+        [languages.en.menu.main.params]
+          class = "text-center"
+          type = "mobile"
+    [languages.en.params]
+      [languages.en.params.search]
+        enable = true
+        type = "algolia"
+        contentLength = 4000
+        placeholder = ""
+        maxResultLength = 10
+        snippetLength = 30
+        highlightTag = "em"
+        absoluteURL = false
+        [languages.en.params.search.algolia]
+          index = "index.en"
+          appID = "YKOM6PKLUY"
+          searchKey = "a44c110d3ac360be2c69cd79d34b77a8"
+      [languages.en.params.home]
+        rss = 10
+        [languages.en.params.home.profile]
+          enable = true
+          gravatarEmail = ""
+          avatarURL = "/images/avatar.png"
+          title = ""
+          subtitle = "Hi, I am Punit here I am Sharing my DevOps experience on blogs"
+          typeit = true
+          social = true
+          disclaimer = ""
+        [languages.en.params.home.posts]
+          enable = true
+          paginate = 6
+      [languages.en.params.social]
+        GitHub = "punitkashyup"
+        Twitter = "pu_is_neet"
+        Linkedin = "punitkashyup"
+        Telegram = "punitkashyup"
+        Email = "mr.punitkr.com"
+        RSS = false
