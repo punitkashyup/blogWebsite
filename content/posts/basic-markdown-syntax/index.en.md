@@ -1,6 +1,6 @@
 ---
 title: "Basic Markdown Syntax"
-date: 2021-12-18T16:15:22+08:00
+date: 2022-10-23T16:15:22+08:00
 draft: false
 description: "This article shows the basic Markdown syntax and format."
 resources:
@@ -14,7 +14,7 @@ lightgallery: true
 
 repost:
   enable: true
-  url: "https://hugoloveit.com/basic-markdown-syntax/"
+  url: "https://punitkashyup.live/basic-markdown-syntax/"
 ---
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files.

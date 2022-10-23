@@ -15,7 +15,7 @@ languageName = "English"
 hasCJKLanguage = false
 
 # default amount of posts in each pages
-paginate = 12
+paginate = 10
 # google analytics code [UA-XXXXXXXX-X]
 googleAnalytics = ""
 # copyright description used only for seo schema
@@ -24,7 +24,7 @@ copyright = ""
 # whether to use robots.txt
 enableRobotsTXT = true
 # whether to use git commit log
-enableGitInfo = true
+enableGitInfo = false
 # whether to use emoji code
 enableEmoji = true
 
@@ -80,11 +80,11 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # website description for RSS, SEO, Open Graph and Twitter Cards
   description = "Devops Blog"
   # site keywords
-  keywords = ["DevOps", "CICD"]
+  keywords = ["DevOps", "CICD", "Docker", "K8s", "Hoe to make CICD", "Linux"]
   # site default theme ["light", "dark", "auto"]
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
-  gitRepo = "https://github.com/hugo-fixit/docs"
+  gitRepo = "https://github.com/punitkashyup/blogWebsite"
   # which hash function used for SRI, when empty, no SRI is used ["sha256", "sha384", "sha512", "md5"]
   fingerprint = ""
   # date format
@@ -147,7 +147,6 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     # Header title config
     [params.header.title]
       # URL of the LOGO
-      # LOGO 的 URL
       logo = "/fixit.min.svg"
       # title name
       name = ">$ cd /home/"
@@ -170,7 +169,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     # Custom content (HTML format is supported)
     custom = ''
     # whether to show Hugo and theme info
-    hugo = true
+    hugo = false
     # whether to show copyright info
     copyright = true
     # whether to show the author
@@ -191,7 +190,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     # recently updated posts settings since v0.2.13
     [params.section.recentlyUpdated]
       enable = true
-      rss = true
+      rss = false
       days = 30
       maxCount = 10
 
@@ -218,7 +217,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # FixIt 0.2.7 | CHANGED title shown in home page (HTML format is supported)
       title = "punit kashyup"
       # subtitle shown in home page
-      subtitle = "This is my new Hugo FixIt site"
+      subtitle = "This is Devops Blogs Site"
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
@@ -284,7 +283,6 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # whether to make the table of the contents in the sidebar automatically collapsed
       auto = true
       # position of TOC ["left", "right"] since v0.2.13
-      # 目录位置 ["left", "right"] since v0.2.13
       position = "right"
     # Display a message at the beginning of an article to warn the reader that its content might be expired. since v0.2.13
     [params.page.expirationReminder]
@@ -300,16 +298,16 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # whether to show the copy button of the code block
       copy = true
       # whether to show the edit button of the code block since v0.2.13
-      edit = true
+      edit = false
       # the maximum number of lines of displayed code by default
       maxShownLines = 10
     # Post edit since v0.2.14
     [params.page.edit]
-      enable = true
+      enable = false
       # Link for fork & edit
-      # url = "/edit/branch-name/subdirectory-name" # base on `params.gitRepo`
-      # url = "https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name" # full url
-      url = "/edit/main/content"
+      # url = "/edit/blogWebsite/content" # base on `params.gitRepo`
+      # url = "https://github.com/punitkashyup/blogWebsite" # full url
+      url = "/tree/main/content"
     # KaTeX mathematical formulas config (KaTeX https://katex.org/)
     [params.page.math]
       enable = false
@@ -344,25 +342,11 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       enable = true
       Twitter = true
       Facebook = true
-      Linkedin = false
+      Linkedin = true
       Whatsapp = false
     # Comment config
     [params.page.comment]
       enable = true
-      # Artalk comment config (https://artalk.js.org/) since v0.2.13
-      [params.page.comment.artalk]
-        enable = false
-        server = "https://yourdomain/api/"
-        site = "默认站点"
-        placeholder = ""
-        noComment = ""
-        sendBtn = ""
-        editorTravel = true
-        flatMode = 'auto'
-        maxNesting = 3
-        # It take effect when `params.page.lightgallery` is enabled
-        lightgallery = false
-        locale = "" # since v0.2.15
       # Disqus comment config (https://disqus.com/)
       [params.page.comment.disqus]
         enable = false
@@ -399,23 +383,6 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         # "assets/data/emoji/"
         emoji = ""
         commentCount = true # since v0.2.13
-      # Waline comment config (https://waline.js.org) since v0.2.13
-      [params.page.comment.waline]
-        enable = false
-        serverURL = ""
-        pageview = false
-        emoji = ['//unpkg.com/@waline/emojis@1.1.0/weibo']
-        meta = ['nick', 'mail', 'link']
-        requiredMeta = []
-        login = 'enable'
-        wordLimit = 0
-        pageSize = 10
-        imageUploader = false
-        highlighter = false
-        comment = false
-        texRenderer = false
-        search = false
-        recaptchaV3Key = ""
       # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
       [params.page.comment.facebook]
         enable = false
@@ -425,14 +392,14 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         languageCode = ""
       # Telegram comments config (https://comments.app/)
       [params.page.comment.telegram]
-        enable = false
-        siteID = ""
+        enable = true
+        siteID = "YsfxliGc"
         limit = 5
         height = ""
         color = ""
         colorful = true
         dislikes = false
-        outlined = false
+        outlined = true
       # Commento comment config (https://commento.io/)
       [params.page.comment.commento]
         enable = false
@@ -457,7 +424,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         lightgallery = false
       # Giscus comments config (https://giscus.app/) since v0.2.14
       [params.page.comment.giscus]
-        enable = true
+        enable = false
         repo = "hugo-fixit/FixIt"
         repoId = "R_kgDOGihPtQ"
         category = "General"
@@ -474,11 +441,11 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     [params.page.library]
       [params.page.library.css]
         # someCSS = "some.css"
-        # located in "assets/" 位于 "assets/"
+        # located in "assets/"  "assets/"
         # someCSS = "https://cdn.example.com/some.css"
       [params.page.library.js]
         # someJavascript = "some.js"
-        # located in "assets/" 位于 "assets/"
+        # located in "assets/" "assets/"
         # someJavascript = "https://cdn.example.com/some.js"
     # Page SEO config
     [params.page.seo]
@@ -654,7 +621,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
 # Author config
 [author]
-  name = "Punit"
+  name = "Admin"
   email = "mr.punitkr@gmail.com"
   link = "https://punitkashyup.live"
 
