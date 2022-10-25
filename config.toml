@@ -1,5 +1,5 @@
 title = "PunitKashyap"
-baseURL = "https://PunitKashyap.live"
+baseURL = "https://PunitKashyup.live"
 
 # theme
 theme = "FixIt"
@@ -78,9 +78,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # FixIt theme version
   version = "0.2.X"
   # website description for RSS, SEO, Open Graph and Twitter Cards
-  description = "Devops Blog"
+  description = "This blog is all about sharing with you my exprience of DevOps with a particular focus on the Microsoft Azure, AWS, Security and Kubernetes"
   # site keywords
-  keywords = ["DevOps", "CICD", "Docker", "K8s", "Hoe to make CICD", "Linux"]
+  keywords = ["DevOps", "CICD", "Docker", "K8s", "Hoe to make CICD", "Linux", "Docker", "Devops Roadmap", "Server","GithubAction", "AzureDevops", "Aws", "Jenkins"]
   # site default theme ["light", "dark", "auto"]
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
@@ -102,7 +102,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # App icon config
   [params.app]
     # optional site title override for the app when added to an iOS home screen or Android launcher
-    title = "PunitKashyup"
+    title = "Punit Kashyap"
     # whether to omit favicon resource links
     noFavicon = false
     # modern SVG favicon to use in place of older style .png and .ico files
@@ -450,10 +450,10 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     # Page SEO config
     [params.page.seo]
       # image URL
-      images = []
+      images = ["/images/avatar.png"]
       # Publisher info
       [params.page.seo.publisher]
-        name = "Punit"
+        name = "Punit Kasshyup DevOps CICD"
         logoUrl = "/images/avatar.png"
 
   # TypeIt config
