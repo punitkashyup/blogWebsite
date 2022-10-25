@@ -22,7 +22,7 @@ googleAnalytics = ""
 copyright = ""
 
 # whether to use robots.txt
-enableRobotsTXT = true
+enableRobotsTXT = false
 # whether to use git commit log
 enableGitInfo = false
 # whether to use emoji code
