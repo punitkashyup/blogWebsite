@@ -1,4 +1,4 @@
-title = "PunitKashyap"
+title = "Punit Kashyap"
 baseURL = "https://PunitKashyup.live"
 
 # theme
@@ -22,7 +22,7 @@ googleAnalytics = ""
 copyright = ""
 
 # whether to use robots.txt
-enableRobotsTXT = false
+enableRobotsTXT = true
 # whether to use git commit log
 enableGitInfo = false
 # whether to use emoji code
