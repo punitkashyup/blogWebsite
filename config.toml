@@ -505,7 +505,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   
   # Site verification code for Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
   [params.verification]
-    google = ""
+    google = "7uNSm6ii6lTEWlddKNlob1cvKZIdbL2oh4Nx00Bl7KM"
 
   # Site SEO config
   [params.seo]
