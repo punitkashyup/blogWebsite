@@ -80,7 +80,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # website description for RSS, SEO, Open Graph and Twitter Cards
   description = "This blog is all about sharing with you my exprience of DevOps with a particular focus on the Microsoft Azure, AWS, Security and Kubernetes"
   # site keywords
-  keywords = ["DevOps", "CICD", "Docker", "K8s", "Hoe to make CICD", "Linux", "Docker", "Devops Roadmap", "Server","GithubAction", "AzureDevops", "Aws", "Jenkins"]
+  keywords = ["DevOps", "CICD", "Docker","punit kashyap","punitkr","punit","punit kumar","punit kashyup", "K8s", "Hoe to make CICD", "Linux", "Docker", "Devops Roadmap", "Server","GithubAction", "AzureDevops","azure devops","azure", "aws", "Jenkins"]
   # site default theme ["light", "dark", "auto"]
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
@@ -106,7 +106,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     # whether to omit favicon resource links
     noFavicon = false
     # modern SVG favicon to use in place of older style .png and .ico files
-    svgFavicon = "/assets/images/devops.svg"
+    svgFavicon = "/assets/svg/devops.svg"
     # Safari mask icon color
     iconColor = "#5bbad5"
     # Windows v8-10 tile color
@@ -621,7 +621,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
 # Author config
 [author]
-  name = "Admin"
+  name = "Punit"
   email = "mr.punitkr@gmail.com"
   link = "https://punitkashyup.live"
 
