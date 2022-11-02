@@ -453,7 +453,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       images = ["/images/avatar.png"]
       # Publisher info
       [params.page.seo.publisher]
-        name = "Punit Kasshyup DevOps CICD"
+        name = "Punit Kashyup DevOps CICD"
         logoUrl = "/images/avatar.png"
 
   # TypeIt config
@@ -621,7 +621,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
 # Author config
 [author]
-  name = "Punit"
+  name = "Punit kashyap"
   email = "mr.punitkr@gmail.com"
   link = "https://punitkashyup.live"
 
@@ -743,7 +743,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
           avatarURL = "/images/avatar.png"
           title = ""
           subtitle = "Hi, I am Punit here I am Sharing my DevOps experience on blogs"
-          typeit = true
+          typeit = false
           social = true
           disclaimer = ""
         [languages.en.params.home.posts]
