@@ -80,7 +80,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # website description for RSS, SEO, Open Graph and Twitter Cards
   description = "This blog is all about sharing with you my exprience of DevOps with a particular focus on the Microsoft Azure, AWS, Security and Kubernetes"
   # site keywords
-  keywords = ["DevOps", "CICD", "Docker","punit kashyap","punitkr","punit","punit kumar","punit kashyup", "K8s", "Hoe to make CICD", "Linux", "Docker", "Devops Roadmap", "Server","GithubAction", "AzureDevops","azure devops","azure", "aws", "Jenkins"]
+  keywords = ["DevOps","devops","devsecops","devops is","cloud devops","devops lifecycle", "CICD", "Docker","punit kashyap","punitkr","punit","punit kumar","punit kashyup", "K8s", "Hoe to make CICD", "Linux", "Docker", "Devops Roadmap", "Server","GithubAction", "AzureDevops","azure devops","azure", "aws", "Jenkins"]
   # site default theme ["light", "dark", "auto"]
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
