@@ -40,7 +40,7 @@ facebook:
 
 # 006: Telegram
 telegram:
-  Weight: 6
+  Weight: 20
   Prefix: https://t.me/
   Title: Telegram
   Icon:

@@ -34,7 +34,11 @@ Now what about authenticating feeds outside the organisation? Which might also i
 
 Once the service connection is created you can use the nuget credential task of vsts to insert the credential into the pipeline.
 #### Please find the official documentation of nuget tasks:
+
+
 **[NuGet restore, pack, and publish task - Azure Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/package/nuget?view=azure-devops)**\
+
+
 **[NuGet Authenticate - Azure Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/package/nuget-authenticate?view=azure-devops)**
 
 However there might be cases, where you might need to restore the packages from your docker build, which was the case for my project.
