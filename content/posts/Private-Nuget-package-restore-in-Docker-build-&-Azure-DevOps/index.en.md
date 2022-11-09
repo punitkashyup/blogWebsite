@@ -13,7 +13,8 @@ categories: ["azure"]
 lightgallery: true
 ---
 
-This will be a quick article on various ways to do private nuget package restore i.e restore your applications’s nuget packages from private nuget feed. This will be applicable for both nuget.org private feed or private nuget feed of Azure DevOps artifacts.
+This will be a quick article on various ways to do private nuget package restore i.e restore your applications’s 
+nuget packages from private nuget feed. This will be applicable for both nuget.org private feed or private nuget feed of Azure DevOps artifacts.
 
 <!--more-->
 ## Nuget
@@ -21,7 +22,9 @@ NuGet is the package manager for .NET. The NuGet client tools provide the abilit
 [Nuget.org](https://www.nuget.org/)
 
 ## Azure devops Pipeline
-In case you are using Azure devops to build your application, if build server is capable of doing msbuild or dotnetcore build, there is always option to restore the package from the devops pipeline. The restore nuget task in azure devops has the ability to pass credential to authenticate the private feed in a secured manner using build secrets. This is the easiest and secure way to restore your project’s nuget packages from your build pipeline.
+In case you are using Azure devops to build your application, if build server is capable of doing msbuild or dotnetcore build, there is always option to restore the package from the devops pipeline. 
+
+The restore nuget task in azure devops has the ability to pass credential to authenticate the private feed in a secured manner using build secrets. This is the easiest and secure way to restore your project’s nuget packages from your build pipeline.
 
 ![azure-pipeline-nuget](./azure-pipeline-nuget.png)
 
@@ -44,10 +47,14 @@ Once the service connection is created you can use the nuget credential task of 
 However there might be cases, where you might need to restore the packages from your docker build, which was the case for my project.
 
 ## In Docker
-In case you are doing the whole build activity from with in the docker build i.e in the dockerfile itself. In that case you need to pass the credential inside the docker build deamon somehow to perform the nuget restore from the private nuget feed(s). Obviously its not secure to store the credentials for private nuget feed in nuget.config in source control. So we need to have some kind of mechanism to pass the credentials during the build in a secure manner.
+In case you are doing the whole build activity from with in the docker build i.e in the dockerfile itself. In that case you need to pass the credential inside the docker build deamon somehow to perform the nuget restore from the private nuget feed(s).
+
+Obviously its not secure to store the credentials for private nuget feed in nuget.config in source control. So we need to have some kind of mechanism to pass the credentials during the build in a secure manner.
 
 
 Now lets look at the options available to achieve that:
+
+
 
 1. **Using Build ARG + ENV variables to pass PAT token from build pipeline to docker.**
 2. **Use more secure feature of docker build i.e docker build secrets to pass PAT token from build pipeline to docker.**
@@ -56,6 +63,8 @@ Now lets look at the options available to achieve that:
 Lets look at each options in details.
 
 1. So there is a way in docker build to pass the PAT token to access private nuget feed from azure build pipeline to docker build deamon. We can use docker ARG and docker ENV variables to achieve this. Let’s see how!
+
+
 This become possible with the introduction of nuget credential provider by Microsoft. Which is available in the link below:
 
 ```Docker
