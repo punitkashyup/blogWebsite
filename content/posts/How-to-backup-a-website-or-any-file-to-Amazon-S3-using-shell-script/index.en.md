@@ -28,7 +28,6 @@ The following steps provide a high-level overview of the walkthrough:
 6. How to run the backup script?
 7. Run the backup script every day or weekly
 8. Backup files on Amazon S3
-9. Conclusion
 
 ### Creating an S3 Bucket
 First, we’ll need to create a new S3 bucket to hold our backups.
@@ -82,10 +81,12 @@ Default output format [None]:
 
 ### Configuring Site Backups
 
-```BASH 
-cd /home/ashley/ashleyrich.com
-mkdir backups
-```
+
+`cd /home/punit/`
+
+
+`mkdir backups`
+
 
 ### Writing the script
 we’ll create a new shell script called ``backup.sh.``
@@ -96,7 +97,8 @@ we’ll create a new shell script called ``backup.sh.``
 Paste the following contents into the file.
 Below is a shell script to backup the specified files and folders and gzip it into a folder, later we can use the aws command to upload the gzip backup file to the Amazon S3.
 
-```BASH #!/bin/bash
+```BASH 
+#!/bin/bash
 
 ################################################################
 ##
@@ -164,32 +166,32 @@ fi;
 #else
 #  echo "Backup is failed! ${NOW_TIME}" | mail -s "Backup Failed (Site) ${NOW}" -r cron admin@punitkashyup.live
 #fi;
+
 ```
 
 ### How to run the backup script?
 We must assign a +x execute permission to run the shell script.
 
 
-```BASH
-$ chmod +x backup-site.sh
+`chmod +x backup-site.sh`
 
-# run the backup
-$ ./backup-site.sh
-```
+**Run the backup** 
+
+`./backup-site.sh`
 
 ### Run the backup script every day or weekly
 The last step is to schedule the backup script to run at a designated time. Begin by opening the crontab for the current user.
 
 
-```Bash 
-crontab -e
 
-# Daily, 1am
-0 1 * * * /home/mkyong/script/backup-site.sh > /dev/null 2>&1
+`crontab -e`
 
-# Weekly, 130am
-30 1 * * 0 /home/mkyong/script/backup-site.sh > /dev/null 2>&1
-```
+**Daily, 1:00am**
+`0 1 * * * /home/mkyong/script/backup-site.sh > /dev/null 2>&1`
+
+**Weekly, 1:30am**
+`30 1 * * 0 /home/mkyong/script/backup-site.sh > /dev/null 2>&1`
+
 
 ### Cleaning Up Old Backups
 Over time, this backup process is going to create a bunch of folder and file archives in the backups directory, which can be a common reason for running out of server disk space.
@@ -201,8 +203,9 @@ To remove old backups, add a line to the bottom of the backups.sh script.
 
 ``rm -f /home/punit/backup/$(date +%Y%m%d* --date='1 month ago').gz``
 
+## Conclusion
 
-### Conclusion
+### Result
 ![BackupS3](./BackupS3.jpg)
 
 
