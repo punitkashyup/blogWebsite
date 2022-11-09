@@ -101,8 +101,8 @@ Below is a shell script to backup the specified files and folders and gzip it in
 ################################################################
 ##
 ##   Site Backup To Amazon S3
-##   Written By: YONG MOOK KIM
-##   https://www.punitkashyup.live/linux/how-to-zip-unzip-tar-in-unix-linux/
+##   Written By: Punit
+##   https://punitkashyup.live/linux/how-to-zip-unzip-tar-in-unix-linux/
 ##   https://docs.aws.amazon.com/cli/latest/userguide/install-linux.html
 ##
 ##   $crontab -e
