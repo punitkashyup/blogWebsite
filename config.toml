@@ -82,7 +82,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # site keywords
   keywords = ["DevOps","devops","devsecops","devops is","cloud devops","devops lifecycle", "CICD", "Docker","punit kashyap","punitkr","punit","punit kumar","punit kashyup", "K8s", "Hoe to make CICD", "Linux", "Docker", "Devops Roadmap", "Server","GithubAction", "AzureDevops","azure devops","azure", "aws", "Jenkins"]
   # site default theme ["light", "dark", "auto"]
-  defaultTheme = "auto"
+  defaultTheme = "dark"
   # public git repo url only then enableGitInfo is true
   gitRepo = "https://github.com/punitkashyup/blogWebsite"
   # which hash function used for SRI, when empty, no SRI is used ["sha256", "sha384", "sha512", "md5"]
