@@ -15,7 +15,7 @@ twemoji: false
 lightgallery: true
 ---
 
-How to Deploy Deploy 1password connect server on azure app service using Docker
+How to Deploy 1password connect server on azure app service using Docker
 
 <!--more-->
 ## Solution Overview
