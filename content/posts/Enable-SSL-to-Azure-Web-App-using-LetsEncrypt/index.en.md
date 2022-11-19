@@ -1,7 +1,7 @@
 ---
 title: "Enable SSL to Azure Web App using LetsEncrypt"
 date: 2022-11-10T17:55:28+08:00
-lastmod: 2022-11-10T17:55:28+08:00
+lastmod: 2022-11-19T17:55:28+08:00
 draft: false
 description: "Enable SSL to Azure Web App using LetsEncrypt"
 resources:
