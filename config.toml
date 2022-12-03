@@ -392,7 +392,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         languageCode = ""
       # Telegram comments config (https://comments.app/)
       [params.page.comment.telegram]
-        enable = false
+        enable = true
         siteID = "YsfxliGc"
         limit = 5
         height = "100%"
