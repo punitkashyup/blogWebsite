@@ -402,7 +402,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         outlined = true
       # Commento comment config (https://commento.io/)
       [params.page.comment.commento]
-        enable = true
+        enable = false
       # Utterances comment config (https://utteranc.es/)
       [params.page.comment.utterances]
         enable = false
