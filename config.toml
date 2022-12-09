@@ -17,7 +17,7 @@ hasCJKLanguage = false
 # default amount of posts in each pages
 paginate = 10
 # google analytics code [UA-XXXXXXXX-X]
-googleAnalytics = "G-R44VWWZ8WC"
+googleAnalytics = "G-C26FB4MRQM"
 # copyright description used only for seo schema
 copyright = ""
 
@@ -393,7 +393,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # Telegram comments config (https://comments.app/)
       [params.page.comment.telegram]
         enable = true
-        siteID = "YsfxliGc"
+        siteID = "nhpKMPb3"
         limit = 5
         height = "100%"
         color = ""
@@ -503,9 +503,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     # Enable in post meta
     enablePost = true
   
-  # Site verification code for Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
+  # Site verification code for Google/Bing/Yandex/Pinterest/Baidu/360/SG-R44VWWZ8WCogou
   [params.verification]
-    google = "7uNSm6ii6lTEWlddKNlob1cvKZIdbL2oh4Nx00Bl7KM"
+    google = ""
 
   # Site SEO config
   [params.seo]
@@ -519,7 +519,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     enable = true
     # Google Analytics
     [params.analytics.google]
-      id = "G-R44VWWZ8WC"
+      id = "G-C26FB4MRQM"
       # whether to anonymize IP
       anonymizeIP = true
     # Fathom Analytics
