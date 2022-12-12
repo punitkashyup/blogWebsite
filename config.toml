@@ -1,5 +1,5 @@
 title = "Punit Kashyap"
-baseURL = "https://PunitKashyup.live"
+baseURL = "https://PunitKashyap.in"
 
 # theme
 theme = "FixIt"
@@ -104,7 +104,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     # optional site title override for the app when added to an iOS home screen or Android launcher
     title = "Punit Kashyap"
     # whether to omit favicon resource links
-    noFavicon = false
+    noFavicon = true
     # modern SVG favicon to use in place of older style .png and .ico files
     svgFavicon = "/assets/svg/devops.svg"
     # Safari mask icon color
@@ -554,7 +554,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # GitHub banner in the top-right or top-left corner since v0.2.14
   [params.githubCorner]
     enable = true
-    permalink = "https://github.com/punitkashyup"
+    permalink = "https://github.com/punitkashyup/blogWebsite"
     title = "View source on GitHub"
     position = "right" # ["left", "right"]
 
@@ -622,8 +622,8 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 # Author config
 [author]
   name = "Punit kashyap"
-  email = "mr.punitkr@gmail.com"
-  link = "https://punitkashyup.live"
+  email = "email@punitkashyap.in"
+  link = "https://punitkashyap.in"
 
 # Sitemap config
 [sitemap]
@@ -742,7 +742,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
           gravatarEmail = ""
           avatarURL = "/images/avatar.png"
           title = ""
-          subtitle = "Hi, I am Punit here I am Sharing my DevOps experience on blogs"
+          subtitle = "Hi, I am Punit, Here I am Sharing my DevOps experience on blogs"
           typeit = false
           social = true
           disclaimer = ""
