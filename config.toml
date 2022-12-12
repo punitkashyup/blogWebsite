@@ -392,7 +392,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         languageCode = ""
       # Telegram comments config (https://comments.app/)
       [params.page.comment.telegram]
-        enable = true
+        enable = false
         siteID = "nhpKMPb3"
         limit = 5
         height = "100%"
@@ -405,9 +405,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         enable = false
       # Utterances comment config (https://utteranc.es/)
       [params.page.comment.utterances]
-        enable = false
+        enable = true
         # owner/repo
-        repo = ""
+        repo = "punitkashyup/blogWebsite"
         issueTerm = "pathname"
         label = ""
         lightTheme = "github-light"
