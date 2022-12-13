@@ -734,7 +734,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         [languages.en.params.search.algolia]
           index = "index.en"
           appID = "MK85PNFGSO"
-          searchKey = "73726d39cdd47fb0d3590d16c7bbcad7"
+          searchKey = "9c6a6fd8ac6594edc7845b62e43277a0"
       [languages.en.params.home]
         rss = 10
         [languages.en.params.home.profile]
