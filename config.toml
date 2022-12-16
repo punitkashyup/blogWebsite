@@ -224,11 +224,15 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       social = true
       # FixIt 0.2.0 | NEW disclaimer (HTML format is supported)
       disclaimer = ""
+      Adsclient = "ca-pub-8734534858742084"
+      AdsinArticleSlot = "00000000"
     # Home page posts
     [params.home.posts]
       enable = true
       # special amount of posts in each home posts page
       paginate = 6
+      Adsclient = "ca-pub-8734534858742084"
+      AdsinArticleSlot = "00000000"
 
   # Social config in home page
   [params.social]
