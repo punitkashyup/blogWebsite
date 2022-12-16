@@ -3,19 +3,10 @@
 All notable changes to this project will be documented in this file.
 <!-- Releases see https://github.com/hugo-fixit/FixIt/releases -->
 
-## v0.2.17
-
-> Snapshot: <>
-
-- :truck: Feat: migrate parameter `params.autoBookmark` to `params.page.autoBookmark` ([#55](https://github.com/hugo-fixit/FixIt/issues/55))
-- :bug: Fix: remove the leading and trailing whitespace of the code string ([#205](https://github.com/hugo-fixit/FixIt/issues/205))
-- :bug: Fix: image shortcode/plugin lose the support for svg type files ([#210](https://github.com/hugo-fixit/FixIt/issues/210))
-- **Full Changelog:** @Lruihao [`v0.2.16...v0.2.17`](https://github.com/hugo-fixit/FixIt/compare/v0.2.16...v0.2.17)
-
 ## v0.2.16 [2022.9.24]
 
 > This version fixes several bugs, adds a few new features and SEO optimizations, and refactors part of the project structure and code.  
-> Snapshot: <https://fixit-jir7e7kzt-x-cell.vercel.app>
+> Snapshot: <>
 
 - :tada: Feat: add reading progress bar support ([#191](https://github.com/hugo-fixit/FixIt/issues/191))
 - :tada: Feat: add b2t scroll percent support ([#192](https://github.com/hugo-fixit/FixIt/issues/192))

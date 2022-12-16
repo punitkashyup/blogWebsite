@@ -4,11 +4,8 @@
 {{- $height := .Height -}}
 {{- with dict "Path" $src "Resources" .Resources | partial "function/resource.html" -}}
   {{- $src = .RelPermalink -}}
-  {{- /* Resources can not get width and height of image for svg type */ -}}
-  {{- if ne .MediaType.SubType "svg" -}}
-    {{- $width = $width | default .Width -}}
-    {{- $height = $height | default .Height -}}
-  {{- end -}}
+  {{- $width = $width | default .Width -}}
+  {{- $height = $height | default .Height -}}
 {{- end -}}
 
 {{- $style := "" -}}

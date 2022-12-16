@@ -21,16 +21,6 @@
     # title will be shown when you hover on this menu link
     title = ""
     weight = 1
-    # FixIt 0.2.14 | NEW add user-defined content to menu items
-    [menu.main.params]
-      # add css class to a specific menu item
-      class = ""
-      # whether set as a draft menu item whose function is similar to a draft post/page
-      draft = false
-      # FixIt 0.2.16 | NEW add fontawesome icon to a specific menu item
-      icon = "fa-solid fa-archive"
-      # FixIt 0.2.16 | NEW set menu item type, optional value: ["mobile", "desktop"]
-      type = ""
   [[menu.main]]
     identifier = "categories"
     pre = ""
@@ -39,8 +29,6 @@
     url = "/categories/"
     title = ""
     weight = 2
-    [menu.main.params]
-      icon = "fa-solid fa-th"
   [[menu.main]]
     identifier = "tags"
     pre = ""
@@ -49,8 +37,6 @@
     url = "/tags/"
     title = ""
     weight = 3
-    [menu.main.params]
-      icon = "fa-solid fa-tags"
 
 # -------------------------------------------------------------------------------------
 # Theme Core Configuration Settings
@@ -81,6 +67,9 @@
   # FixIt 0.2.14 | NEW FixIt will, by default, inject a theme meta tag in the HTML head on the home page only.
   # You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
   disableThemeInject = false
+  # FixIt 0.2.16 | NEW Auto Bookmark Support
+  # If true, save the reading progress when closing the page.
+  autoBookmark = false
 
   # FixIt 0.2.0 | NEW App icon config
   [params.app]
@@ -89,7 +78,7 @@
     # whether to omit favicon resource links
     noFavicon = false
     # modern SVG favicon to use in place of older style .png and .ico files
-    svgFavicon = "../devops.svg"
+    svgFavicon = ""
     # Safari mask icon color
     iconColor = "#5bbad5"
     # Windows v8-10 tile color
@@ -202,9 +191,9 @@
     [params.home.profile]
       enable = true
       # Gravatar Email for preferred avatar in home page
-      gravatarEmail = "xx@xx.com"
+      gravatarEmail = ""
       # URL of avatar shown in home page
-      avatarURL = ""
+      avatarURL = "/fixit.min.svg"
       # FixIt 0.2.7 | CHANGED title shown in home page (HTML format is supported)
       title = ""
       # subtitle shown in home page
@@ -335,9 +324,6 @@
     pageStyle = "normal"
     # FixIt 0.2.14 | NEW Gravatar is force-used as the author's avatar
     gravatarForce = false
-    # FixIt 0.2.17 | CHANGED Auto Bookmark Support
-    # If true, save the reading progress when closing the page.
-    autoBookmark = false
     # FixIt 0.2.15 | NEW Repost config
     [params.page.repost]
       enable = false
@@ -425,7 +411,7 @@
       Digg = false
       Stumbleupon = false
       Flipboard = false
-      Weibo = false
+      Weibo = true
       Renren = false
       Myspace = false
       Blogger = false
@@ -721,7 +707,7 @@
     c4u = false
     # Please do not expose to public!
     githubToken = ""
-    # Mobile Devtools config
+    # Mobile Devtools confi
     [params.dev.mDevtools]
       enable = false
       # "vConsole", "eruda" supported

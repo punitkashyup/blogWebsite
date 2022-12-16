@@ -238,10 +238,8 @@
 {{- end -}}
 
 {{- /* Auto Bookmark */ -}}
-{{- if eq .Kind "page" -}}
-  {{- with $params.autoBookmark -}}
-    {{- $config = dict "autoBookmark" . | merge $config -}}
-  {{- end -}}
+{{- with .Site.Params.autoBookmark -}}
+  {{- $config = dict "autoBookmark" . | merge $config -}}
 {{- end -}}
 
 {{- range $params.library.css -}}
