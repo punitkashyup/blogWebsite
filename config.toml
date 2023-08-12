@@ -99,6 +99,8 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # FixIt will, by default, inject a theme meta tag in the HTML head on the home page only. since v0.2.14
   # You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
   disableThemeInject = false
+  Adsclient = "ca-pub-8734534858742084"
+  AdsinArticleSlot = "f08c47fec0942fa0"
 
   # App icon config
   [params.app]
