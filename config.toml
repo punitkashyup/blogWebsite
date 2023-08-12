@@ -21,10 +21,6 @@ googleAnalytics = "G-C26FB4MRQM"
 # copyright description used only for seo schema
 copyright = ""
 
-# Configure Google AdSense
-[params]
-  Adsclient = "ca-pub-8734534858742084"
-  AdsinArticleSlot = "f08c47fec0942fa0"
 
 # whether to use robots.txt
 enableRobotsTXT = true
